@@ -1,5 +1,19 @@
+:root {
+  --primary-text-color: #757575;
+  --primary-tittle-color: #212121;
+  --accent-color: #2196f3;
+  --primary-white-color: #ffffff;
+  --color-logo-black: #000000;
+  --bg-color: #2f303a;
+  --hero-btn-color: #188ce8;
+  --footer-link-color: rgba(255, 255, 255, 0.6);
+  --active-btn-bg-color: #f5f4fa;
+}
+
 body {
   font-family: "roboto", sans-serif;
+  color: var(--primary-text-color);
+  background-color: var(--primary-white-color);
 }
 
 .list {
@@ -17,7 +31,7 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: #2196f3;
+  color: var(--accent-color);
 }
 
 .header-logo {
@@ -26,7 +40,7 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: #000000;
+  color: var(--color-logo-black);
 }
 
 .header-link {
@@ -34,7 +48,12 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: var(--primary-tittle-color);
+}
+
+.header-link:hover,
+.header-link:focus {
+  color: var(--accent-color);
 }
 
 .header-tel,
@@ -43,12 +62,19 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  color: #757575;
+  color: var(--primary-text-color);
+}
+
+.header-tel:hover,
+.header-mail:hover,
+.header-tel:focus,
+.header-mail:focus {
+  color: var(--accent-color);
 }
 
 /* -------------------------INDEX-HERO-------------------- */
 .hero {
-  background: #2f303a;
+  background: var(--bg-color);
 }
 
 .hero-tittle {
@@ -58,7 +84,7 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--primary-white-color);
 }
 
 .hero-btn {
@@ -70,11 +96,22 @@ body {
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
-  color: #ffffff;
-  background: #2196f3;
+  color: var(--primary-white-color);
+  background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 0;
+  cursor: pointer;
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+  color: var(--primary-white-color);
+  background: var(--hero-btn-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0;
+  cursor: pointer;
 }
 
 /* ---------------------INDEX-ADVANCES--------------------- */
@@ -97,14 +134,14 @@ body {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #212121;
+  color: var(--primary-tittle-color);
 }
 
 .advances-after-title {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--primary-text-color);
 }
 
 /* -------------------INDEX-ABOUT US--------------------- */
@@ -114,7 +151,7 @@ body {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--primary-tittle-color);
 }
 
 /* -------------------------INDEX-TEAM------------------ */
@@ -124,7 +161,7 @@ body {
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--primary-tittle-color);
 }
 
 .team-title-name {
@@ -133,7 +170,7 @@ body {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--primary-tittle-color);
 }
 
 .team-speciality {
@@ -141,12 +178,12 @@ body {
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--primary-text-color);
 }
 /* ---------------------INDEX-FOOTER-----------------------*/
 
 .footer {
-  background: #2f303a;
+  background: var(--bg-color);
 }
 
 .footer-logo {
@@ -155,40 +192,72 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--primary-white-color);
 }
 .footer-link-address {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #ffffff;
+  color: var(--primary-white-color);
   font-style: normal;
 }
 
-.footer-link-mail {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-  font-style: normal;
-}
-
+.footer-link-mail,
 .footer-link-tel {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--footer-link-color);
   font-style: normal;
 }
 
-/* -------------------PORTFOLIO-BUTTONS------------------ */
+/* -------------------PORTFOLIO-BUTTON------------------ */
 
-.buttons-item {
+.button-active {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--primary-white-color);
+  background: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  cursor: pointer;
+  border: 0;
+}
+
+.button-active:hover,
+.button-active:focus {
+  color: var(--primary-text-color);
+  background: var(--active-btn-bg-color);
+  border-radius: 4px;
+  cursor: pointer;
+  border: 0;
+}
+
+.button-primary {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-tittle-color);
+  background: var(--active-btn-bg-color);
+  border-radius: 4px;
+  cursor: pointer;
+  border: 0;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+  color: var(--primary-white-color);
+  background: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  cursor: pointer;
+  border: 0;
 }
 
 /* ----------------------PORTFOLIO-MAIN-------------------- */
@@ -197,12 +266,12 @@ body {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  color: #212121;
+  color: var(--primary-tittle-color);
 }
 
 .main-list-text {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--primary-text-color);
 }
